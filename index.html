@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>WeatherApp</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weather-app">
+
+      
+        <div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action">Monday</a>
+  <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png">
+  <a href="#" class="list-group-item list-group-item-action">Tuesday</a>
+  <a href="#" class="list-group-item list-group-item-action">Wednesday</a>
+  <a href="#" class="list-group-item list-group-item-action">Thursday</a>
+  <a href="#" class="list-group-item list-group-item-action">Friday</a>
+  <br/>
+</div>
+        
+  <div class="card">
+  <div class="card-body">
+    <div class="temperature">
+  <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="cloudy-icon">
+            <br/>
+            <span class="temperature" id="temperature"></span
+                ><span class="units">
+                  <a href="#" id="celsius-link">°C</a> |
+                  <a href="#" id="fahrenheit-link">°F</a>
+                </span>
+                <br/>
+                
+                 <ul>
+          
+                  <li>
+                    Humidity: <span id="humidity"></span>%
+                  </li>
+                  <li>
+                    Wind: <span id="wind"></span>km/h
+                  </li>
+                 </ul>
+                
+
+  </div>
+</div>
+</div>
+  <div class="card">
+            <div class="card-body">
+              <div class = "place-date">
+              <h1 id ="city"></h1>
+              <h2>
+                Monday 18:30
+                </h2>
+                <h3>
+                  <span id="description"></span>
+                </h3>
+                
+               
+            
+            </div>
+            </div>
+          
+      </div>
+  
+      <p>
+        <nav class="navbar bg-light">
+  <div class="container-fluid">
+    <form class="d-flex"
+     role="search"
+     id="search-form">
+      <input class="form-control me-2" 
+      type="search" 
+      placeholder="Other city?" 
+      aria-label="Search"
+        id = "city-input"
+         autocomplete="off"/>
+      <button class="btn btn-outline-info" type="submit">Search</button>
+    </form>
+ </div>
+</nav>
+      </p>
+      <p>
+        <nav class="nav">
+ 
+  <a class="nav-link" href="#">London</a>
+  <a class="nav-link" href="#">Madrid</a>
+  <a class="nav-link" href="#">Prague</a>
+  <a class="nav-link" href="#">Kyiv</a>
+</nav>
+      </p>
+      <button class = "btn btn-submit"
+      id="current-location-button">
+        Current location
+      </button>
+    </div>
+  </div>
+</div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
