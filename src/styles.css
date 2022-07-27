@@ -1,0 +1,78 @@
+body {
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(
+    178.6deg,
+    rgb(232, 245, 253) 3.3%,
+    rgb(252, 253, 255) 109.6%
+  );
+  font-weight: 500;
+  margin-top: 20px;
+}
+.container {
+}
+.weather-app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.card-body {
+  background: linear-gradient(
+    178.6deg,
+    rgb(232, 245, 253) 3.3%,
+    rgb(252, 253, 255) 109.6%
+  );
+  text-align: center;
+}
+.card {
+  border-width: 0px;
+}
+.place-date {
+  margin-top: 20px;
+  background: linear-gradient(
+    178.6deg,
+    rgb(232, 245, 253) 3.3%,
+    rgb(252, 253, 255) 109.6%
+  );
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 2px 2px 3px rgba(116, 112, 157, 0.5);
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+.temperature {
+  font-size: 40px;
+}
+ul {
+  list-style-type: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.units {
+  font-size: 20px;
+}
+
+.list-group {
+  max-width: 200px;
+  margin-top: 25px;
+}
+
+.container-fluid {
+}
+.nav {
+  width: 150%;
+  display: flex;
+}
+.nav-link {
+  color: #00a8e9;
+}
+#current-location-button {
+  color: #0dcaf0;
+  border-color: #0dcaf0;
+  opacity: transparent;
+}
