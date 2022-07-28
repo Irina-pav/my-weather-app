@@ -77,8 +77,10 @@ button.btn-submit {
   display: block;
   margin-left: 75%;
 }
-a.source-code {
+small {
   display: block;
-  color: #00a8e9;
   text-align: center;
+}
+a.source-code {
+  color: #00a8e9;
 }
