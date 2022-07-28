@@ -71,8 +71,9 @@ a {
 .nav-link {
   color: #00a8e9;
 }
-#current-location-button {
+button.btn-submit {
   color: #0dcaf0;
   border-color: #0dcaf0;
-  opacity: transparent;
+  display: block;
+  margin-left: 75%;
 }
