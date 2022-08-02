@@ -38,7 +38,8 @@ body {
   box-shadow: 2px 2px 3px rgba(116, 112, 157, 0.5);
 }
 img {
-  display: block;
+  margin-bottom: 0;
+  display: inline;
   margin: 0 auto;
 }
 .temperature {
