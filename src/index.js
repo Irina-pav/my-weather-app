@@ -130,7 +130,7 @@ selectParis.addEventListener("click", searchParis);
 function searchNewYork(event) {
   event.preventDefault();
   let apiKey = "9bfd0ab1b312f3937fa01e630fff0dc9";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=NewYork&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New+York&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
