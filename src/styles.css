@@ -36,16 +36,13 @@ img {
   display: inline;
   margin: 0 auto;
 }
+small {
+}
 button.btn-submit {
   color: #0dcaf0;
   border-color: #0dcaf0;
-  display: block;
-  margin-left: 75%;
 }
-small {
-  display: block;
-  text-align: center;
-}
+
 a.source-code {
   color: #00a8e9;
 }
@@ -101,4 +98,9 @@ a.source-code {
 }
 .nav-link {
   color: #00a8e9;
+}
+.col-6 {
+  margin-top: 15px;
+  padding-left: 300px;
+  max-width: 550px;
 }
