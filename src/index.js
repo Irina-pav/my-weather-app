@@ -36,11 +36,11 @@ let months = [
   "December",
 ];
 let month = months[now.getMonth()];
+let iconElement = document.querySelector("#icon");
 h2.innerHTML = `${day} ${month} ${date}, ${hour}:${minutes}`;
 
 ///
 function displayWeatherCondition(response) {
-  let iconElement = document.querySelector("#icon");
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
