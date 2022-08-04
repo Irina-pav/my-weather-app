@@ -105,3 +105,34 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", findCurrentLocation);
 
 searchCity("Tokyo");
+
+////////Select city
+function searchLondon(event) {
+  event.preventDefault();
+  let apiKey = "9bfd0ab1b312f3937fa01e630fff0dc9";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+let selectLondon = document.querySelector("#london");
+selectLondon.addEventListener("click", searchLondon);
+
+function searchParis(event) {
+  event.preventDefault();
+  let apiKey = "9bfd0ab1b312f3937fa01e630fff0dc9";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+let selectParis = document.querySelector("#paris");
+selectParis.addEventListener("click", searchParis);
+
+function searchNewYork(event) {
+  event.preventDefault();
+  let apiKey = "9bfd0ab1b312f3937fa01e630fff0dc9";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=NewYork&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+let selectNewYork = document.querySelector("#new-york");
+selectNewYork.addEventListener("click", searchNewYork);
