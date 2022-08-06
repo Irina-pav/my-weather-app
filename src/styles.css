@@ -84,7 +84,6 @@ a.source-code {
 .units {
   font-size: 20px;
 }
-
 .list-group {
   max-width: 200px;
   margin-top: 25px;
@@ -103,4 +102,10 @@ a.source-code {
   margin-top: 15px;
   padding-left: 300px;
   max-width: 550px;
+}
+#celsius-link {
+  cursor: default;
+}
+#fahrenheit-link {
+  cursor: default;
 }
