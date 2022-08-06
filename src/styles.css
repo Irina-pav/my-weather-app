@@ -36,8 +36,7 @@ img {
   display: inline;
   margin: 0 auto;
 }
-small {
-}
+
 button.btn-submit {
   color: #0dcaf0;
   border-color: #0dcaf0;
@@ -89,8 +88,6 @@ a.source-code {
   margin-top: 25px;
 }
 
-.container-fluid {
-}
 .nav {
   width: 150%;
   display: flex;
