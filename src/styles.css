@@ -37,10 +37,21 @@ img {
   margin: 0 auto;
 }
 
-button.btn-submit {
-  color: #0dcaf0;
-  border-color: #0dcaf0;
+button.btn-submit {border-width: 1px;
+border-color: rgba(0, 0, 0, 0.125);
 }
+
+
+button.btn.btn-outline-info {
+  border-color:rgba(0, 0, 0, 0.125);
+  background-color: rgb(232, 245, 253);
+  transition: color 0.15s ease-in-out;
+   background-color: 0.15s ease-in-out;
+    border-color: 0.15s ease-in-out;
+     box-shadow: 0.15s ease-in-out;
+     border-width: 1px;
+}
+
 
 a.source-code {
   color: #00a8e9;
@@ -99,6 +110,23 @@ a.source-code {
   margin-top: 15px;
   padding-left: 300px;
   max-width: 550px;
+}
+.weather-forecast {
+  border-radius: 15px;
+  color: none;
+}
+.list-group-item {
+  background-color: rgb(232, 245, 253);
+  transition: color 0.15s ease-in-out;
+   background-color 0.15s ease-in-out;
+    border-color 0.15s ease-in-out;
+     box-shadow 0.15s ease-in-out;
+}
+.forecast-day {
+  font-size: 25px;
+}
+.forecast-temp {
+  font-size: 20px;
 }
 #celsius-link {
   cursor: default;
