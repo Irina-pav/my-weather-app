@@ -40,19 +40,35 @@ let iconElement = document.querySelector("#icon");
 h2.innerHTML = `${day} ${month} ${date}, ${hour}:${minutes}`;
 
 /////
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  return days[day];
+}
+
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
   let forecastHTML = `<div class = "row">`;
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
   <div class="list-group">
           <div class = "weather-forecast" id = "forecast">
           <a href="#" class="list-group-item list-group-item-action">
-  <span class="forecast-day">${day}</span> <span class="forecast-temp">18°</span> <span class="forecast-icon"><img src="" alt="cloudy-icon"> </span> </a>
+  <span class="forecast-day">${formatDay(forecastDay.dt)}
+  </span> <span class="forecast-temp-max">${
+    forecastDay.temp.max
+  }°</span> <span class="forecast-icon">
+  <img 
+  src="http://openweathermap.org/img/wn/${
+    forecastDay.weather[0].icon
+  }@2x.png" alt="" width="42"> </span> </a>
 </div>
 </a>
   </div>`;
