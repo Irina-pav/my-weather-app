@@ -54,7 +54,8 @@ button.btn.btn-outline-info {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-small {text-align: right;}
+small {text-align: right;
+padding-right: 25px;}
 a.source-code {
   color: #00a8e9;
 }
@@ -120,7 +121,7 @@ margin-top: 5px;
   pointer-events: none;
 }
 #current-location-button {
-  margin-left: 65px;
+  margin-left: 55px;
   width: 300px;
   background-color: rgb(232, 245, 253);
   border-width: 1px;
