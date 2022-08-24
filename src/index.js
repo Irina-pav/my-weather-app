@@ -39,6 +39,29 @@ let month = months[now.getMonth()];
 let iconElement = document.querySelector("#icon");
 h2.innerHTML = `${day} ${month} ${date}, ${hour}:${minutes}`;
 
+/////
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class = "row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="list-group">
+          <div class = "weather-forecast" id = "forecast">
+          <a href="#" class="list-group-item list-group-item-action">
+  <span class="forecast-day">${day}</span> <span class="forecast-temp">18°</span> <span class="forecast-icon"><img src="" alt="cloudy-icon"> </span> </a>
+</div>
+</a>
+  </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 ///
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -102,6 +125,7 @@ function convertToCelsius(event) {
 
 /////
 let celsiusTemperature = null;
+
 ////
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
@@ -116,6 +140,7 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", findCurrentLocation);
 
 searchCity("Tokyo");
+displayForecast();
 
 ////////Select city
 function searchLondon(event) {
