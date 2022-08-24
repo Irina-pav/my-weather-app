@@ -61,24 +61,24 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class = "row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 4) {
+    if (index < 3) {
       forecastHTML =
         forecastHTML +
         `
   <div class="list-group">
           <div class = "weather-forecast" id = "forecast">
-          <a href="#" class="list-group-item list-group-item-action">
+          <div class="list-group-item list-group-item-action">
   <span class="forecast-day">${formatDay(forecastDay.dt)}
   </span> <span class="forecast-temp-max">${Math.round(
     forecastDay.temp.max
   )}°</span> 
-  <span class="forecast-icon">
+  <div class="forecast-icon">
   <img 
   src="http://openweathermap.org/img/wn/${
     forecastDay.weather[0].icon
-  }@2x.png" alt="" width="42"> </span> </a>
+  }@2x.png" alt="" width="50"> </div>
 </div>
-</a>
+</div>
   </div>`;
     }
   });
@@ -154,10 +154,7 @@ function convertToCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-/////
 let celsiusTemperature = null;
-
-////
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 

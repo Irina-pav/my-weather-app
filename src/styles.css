@@ -5,7 +5,6 @@ body {
     rgb(232, 245, 253) 3.3%,
     rgb(252, 253, 255) 109.6%
   );
-  font-weight: 500;
   margin-top: 20px;
 }
 h2 {
@@ -22,39 +21,46 @@ ul {
   font-size: 20px;
 }
 li {
+  text-align: center;
   font-size: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-
 a {
   text-decoration: none;
   color: black;
 }
+
 img {
   margin-bottom: 0;
   display: inline;
   margin: 0 auto;
 }
 
-button.btn-submit {border-width: 1px;
-border-color: rgba(0, 0, 0, 0.125);
-}
-
-
 button.btn.btn-outline-info {
-  border-color:rgba(0, 0, 0, 0.125);
-  background-color: rgb(232, 245, 253);
-  transition: color 0.15s ease-in-out;
-   background-color: 0.15s ease-in-out;
-    border-color: 0.15s ease-in-out;
-     box-shadow: 0.15s ease-in-out;
-     border-width: 1px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #212529;
+  background: transparent;
+  border-width: 1px;
+  border-color:rgba(255, 255, 255, 0.15)
+  border-radius: 0.375rem;
+  display: inline-block;
+
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
-
-
+small {text-align: right;}
 a.source-code {
   color: #00a8e9;
+}
+
+nav.navbar.bg-light {width: fit-content;
+
 }
 
 .container {
@@ -73,7 +79,9 @@ a.source-code {
   text-align: center;
 }
 .card {
+  margin-left: 0px;
   border-width: 0px;
+  margin-bottom: 20px;
 }
 .place-date {
   margin-top: 20px;
@@ -96,20 +104,12 @@ a.source-code {
 }
 .list-group {
   max-width: 200px;
-  margin-top: 25px;
+margin-top: 5px;
 }
 
-.nav {
-  width: 150%;
-  display: flex;
-}
-.nav-link {
-  color: #00a8e9;
-}
 .col-6 {
   margin-top: 15px;
   padding-left: 300px;
-  max-width: 550px;
 }
 .weather-forecast {
   border-radius: 15px;
@@ -117,16 +117,21 @@ a.source-code {
 }
 .list-group-item {
   background-color: rgb(232, 245, 253);
-  transition: color 0.15s ease-in-out;
-   background-color 0.15s ease-in-out;
-    border-color 0.15s ease-in-out;
-     box-shadow 0.15s ease-in-out;
+  pointer-events: none;
 }
-.forecast-day {
+#current-location-button {
+  margin-left: 65px;
+  width: 300px;
+  background-color: rgb(232, 245, 253);
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.125);
+}
+#search-form {margin-right:25px;
+margin-left: 50px;}
+#forecast {
+  text-align: center;
   font-size: 25px;
-}
-.forecast-temp {
-  font-size: 20px;
+  margin-bottom: 10px;
 }
 #celsius-link {
   cursor: default;
@@ -134,3 +139,6 @@ a.source-code {
 #fahrenheit-link {
   cursor: default;
 }
+.nav-link {display: block;
+margin-left:55px;
+margin-right: 5px;}
