@@ -40,10 +40,11 @@ let iconElement = document.querySelector("#icon");
 h2.innerHTML = `${day} ${month} ${date}, ${hour}:${minutes}`;
 
 /////
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class = "row">`;
   let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  let forecastHTML = `<div class = "row">`;
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
@@ -62,16 +63,19 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+////
+function getForecast(coordinates) {
+  let apiKey = "9bfd0ab1b312f3937fa01e630fff0dc9";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 ///
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
-  ////
   celsiusTemperature = response.data.main.temp;
-  ////
-
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -83,6 +87,8 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function searchCity(city) {
@@ -140,13 +146,13 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", findCurrentLocation);
 
 searchCity("Tokyo");
-displayForecast();
 
 ////////Select city
 function searchLondon(event) {
   event.preventDefault();
   let apiKey = "9bfd0ab1b312f3937fa01e630fff0dc9";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&units=metric`;
+
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
